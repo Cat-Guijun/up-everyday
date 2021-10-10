@@ -1,0 +1,46 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #222;
+}
+
+.tip{
+	font-size: 8rem;
+	color: #333;
+	position: absolute;
+}
+.tip::after{
+	content: attr(data-spot);
+	position: absolute;
+	color: yellow;
+	left: 0;
+	top: 0;
+	color: transparent;
+	animation: spotlight 4.6s ease-in-out infinite;
+	background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2019-01-05%2F5c305da1f3738.jpg%3Fdown&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1636448568&t=d33100d552ef1736fe6617b48b117ccf);
+	background-size: 150%;
+	background-position: center; 
+	-webkit-background-clip: text;
+}
+
+@keyframes spotlight{
+	0%{
+		-webkit-clip-path: ellipse(14% 100% at 0% 50% );
+		clip-path: ellipse(14% 100% at 0% 50% );
+	}
+	50%{
+		-webkit-clip-path: ellipse(14% 100% at 100% 50% );
+		clip-path: ellipse(14% 100% at 100% 50% );
+	}
+	100%{
+		-webkit-clip-path: ellipse(14% 100% at 0% 50% );
+		clip-path: ellipse(14% 100% at 0% 50% );
+	}
+}
